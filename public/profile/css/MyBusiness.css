@@ -1,0 +1,141 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-top: 20px;
+    background-color: lightgray;
+}
+
+.main{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav
+{
+    width: 100%;
+    height: 80px;
+    background-color: whitesmoke;
+}
+
+ul
+{
+    margin-left: 60px;
+
+}
+
+ul li
+{
+    list-style: none;
+    display: inline-block;
+    line-height: 80px;
+    padding: 0 20px;
+}
+
+ul li a
+{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e1e1e;
+}
+
+ul li a:hover
+{
+    color:rgb(4, 101, 245)
+}
+.out:hover{
+    color: red;
+}
+.tit{
+    margin-top: 100px;
+    margin-left: 600px;
+    font-size: 60px;
+    color: #333;
+}
+.aside{
+    height: 200px;
+    width: 300px;
+    background-color: whitesmoke;
+    margin-top: -270px;
+    margin-left: 30px;
+   
+}
+.aside, h2{
+    padding-left: 50px;
+    padding-top: 10px;
+}
+.table1{
+    border: none;
+    width: 280px;
+    height: 90px;
+    margin-top: 30px;
+    margin-left: -40px;
+
+}
+ h3{
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+/**image**/
+.img{
+    width: 100%;
+    height: 270px;
+}
+.image-preview {
+    width: 300px;
+    min-width: 300px;
+    min-height: 200px;
+    border: 2px solid #dddddd;
+    margin-top: -180px;
+    margin-left: 35px;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #cccccc;
+}
+.image-preview__image {
+    display: none;
+    width: 200px;
+    
+}
+.input{
+    padding: 12px;
+    margin-left: 80px;
+}
+.gg{
+    margin-top: 30px;
+    margin-left: 840px;
+}
+table{
+    background-color: whitesmoke;
+    width: 660px;
+    margin-top: 20px;
+    margin-left: 450px;
+    
+}
+table, th, td{
+    border: 1px solid black;
+}
+table, th{
+    width: 50%;
+    
+}
+table, td{
+    width: 50%;
+    text-align: center;
+}
+ table tbody{
+   
+    font-size: 20px;
+ }

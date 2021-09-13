@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Investment's Business details</title>
+    <link href="css/registerBusinessman1.css" rel="stylesheet" />
+    <script src="js/registerBusinessman1.js"> </script>
+    <div class="main">
+        <nav>
+            <ul>
+                <li><a href="../sign/StartSign.html">Sign In</a></li>
+                <li><a href="registerstart.html">Register</a></li>
+                <li><a href="../About me/About me.html">About Us</a></li>
+                <li><a href="../contact/contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="h11">
+        <h1>Real Investment's </h1>
+    </div>
+    <div class="h22">
+        <h2>An Investment that suits everyone</h2>
+    </div><br>
+    <hr>
+</head>
+
+<body>
+    <center>
+        <!--ניהול ספרים לבן אדם יש ספרים של מס הכנסה וביטוח לאומי ומעמ-->
+        <!--רשם חברות-->
+        <!--דוח מאזן רווח והפסד זה דוח שרשום דוח שנה מול שנה או חודש מול מ=חודש-->
+
+        <br>
+        <h3>Business Details</h3><br>
+
+
+        <div>
+            <div class="box">
+                <div class="box1">
+                    <label for="Business Name"><strong>Business Name:</strong></label>
+                    <input type="text" id="BusinessName" placeholder="BusinessName" name="BusinessName"><br><br>
+                </div>
+
+                <div class="box2">
+                    <label for="Business Address"><strong>Business Address:</strong></label>
+                    <input type="text" id="BusinessAddress" placeholder="BusinessAddress"
+                        name="BusinessAddress"><br><br>
+                </div>
+
+                <div class="box3">
+                    <label for="email"><strong>Business email:</strong></label>
+                    <input type="email" placeholder="BusinessEmail" name=" BusinessEmail" id="BusinessEmail"><br><br>
+                </div>
+
+                <div class="box4">
+                    <label for="Business Description"><strong>Business Description:</strong></label>
+                    <input type="text" id="BusinessDescription" placeholder="BusinessDescription"
+                        name="BusinessDescription"><br><br>
+                </div>
+
+                <div class="box5">
+                    <!--עוסק מורשה-->
+                    <label for="Authorized dealer"><strong>Authorized dealer:</strong></label>
+                    <input class="a" type="file" id="AuthorizedDealer" placeholder="AuthorizedDealer"
+                        name="AuthorizedDealer"><br><br>
+                </div>
+
+                <div class="box6">
+                    <!--מצב חשבון פעיל-->
+                    <label for="Active account page"><strong>Active account page:</strong></label>
+                    <input class="b" type="file" id="ActiveAccountPage" placeholder="ActiveAccountPage"
+                        name="ActiveAccountPage"><br><br>
+                </div>
+
+                <div class="box7">
+                    <!--דוח מאזן רווח והפסד-->
+                    <label for="Profit and Loss"><strong>Profit and Loss:</strong></label>
+                    <input class="c" type="file" id="ProfitAndLoss" placeholder="ProfitAndLoss"
+                        name="ProfitAndLoss"><br><br>
+                </div>
+
+                <div class="box8">
+                    <!--רשם חברות-->
+                    <label for="Registrar of Companies"><strong>Registrar of Companies:</strong></label>
+                    <input class="d" type="file" id="RegistrarOfCompanies" placeholder="RegistrarOfCompanies"
+                        name="RegistrarOfCompanies"><br><br>
+                </div>
+
+                <div class="box9">
+                    <!--ניהול ספרים-->
+                    <label  for="Book managment"><strong>Book managment:</strong></label>
+                    <input class="e" type="file" id="BookManagment" placeholder="BookManagment"
+                        name="BookManagment"><br><br>
+                </div>
+
+
+                <div id="errors">
+
+                </div>
+
+
+                <a href="../profile/Modelprofile.html">
+                    <button class="Next" type="submit" id="submit" onclick="register()">Register</button>
+                    <br><br>
+            </div>
+            <div id="errors">
+
+            </div>
+            </a>
+        </div>
+        <div class="ac">
+            <p>Already have an account? <a href="../sign/StartSign.html">Sign in</a></p><br>
+        </div>
+
+    </center>
+</body>
+
+</html>

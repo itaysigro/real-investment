@@ -1,0 +1,70 @@
+const express = require("express");
+// const bcrypt = require("bcrypt");
+const { UserModel, validUser, validLogin, genToken } = require("../models/userModel");
+const { authToken, atuhToken } = require("../auth/authToken");
+const router = express.Router();
+
+router.get("/", (req, res) => {
+    res.json({ msg: "users work" })
+});
+
+router.get("/userInfo", atuhToken, async (req, res) => {
+    let user = await UserModel.findOne({ _id: req.tokenData._id }, { password: 0 });
+    res.json({ user });
+})
+
+router.post("/uploadUserImage", async (req, res) => {
+    let image = req.body.image;
+    let user = await UserModel.findOne({ _id: req.tokenData._id });
+    user.image = image;
+    await user.save();
+    res.json({ user });
+})
+
+router.post("/", async (req, res) => {
+    let validBody = validUser(req.body);
+    if (validBody.error) {
+        return res.status(400).json(validBody.error.details);
+    }
+    try {
+        let userExists = await UserModel.findOne({ email: req.body.email });
+        if (userExists) {
+            return res.status(400).json({ message: "Email already exists." });
+        }
+
+        let user = new UserModel(req.body);
+
+        user.password = req.body.password;
+
+        await user.save();
+        user.password = "********";
+        res.json(user);
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({ message: "We couldn't perform this action at this time, please try again later" });
+    }
+})
+
+router.post("/login", async (req, res) => {
+    let validBody = validLogin(req.body);
+    if (validBody.error) {
+        return res.status(400).json(validBody.error.details);
+    }
+
+    let user = await UserModel.findOne({ email: req.body.email });
+    if (!user) {
+        return res.status(401).json({ message: "We couldn't find a user with this details." });
+    }
+
+    let passValid = req.body.pass === user.pass;
+    if (!passValid) {
+        return res.status(401).json({ message: "We couldn't find a user with this details." });
+    }
+
+    let newToken = genToken(user._id);
+    res.json({ token: newToken });
+    
+})
+
+module.exports = router;

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="main">
+        <nav>
+            <ul>
+                <li>
+                    <div class="hello">Hello: user</div>
+                </li>
+                <li><a href="homesign.html">Home</a></li>
+                <li><a href="../profile/Modelprofile.html">Profile</a></li>
+                <li><a href="../About me/About me.html">About me</a></li>
+                <li><a href="../contact/contact.html">contact</a></li>
+                <li><a class="out" href="../index.html">Sign Out</a></li>
+            </ul>
+        </nav>
+    </div>
+    <title>Real Investment's Business details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="css/modelProfile.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+    <div class="h11">
+        <h1>Real Investment's </h1>
+    </div>
+    <div class="h22">
+        <h2>An Investment that suits everyone</h2>
+    </div>
+    <hr>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="row">
+                <div class="col-md-4 mt-1">
+                    <div class="card text-center sidebar">
+                        <div class="card-body">
+
+
+                            <div class="image-preview" id="imagePreview">
+                                <img src="" alt="Image Preview" class="image-preview__image">
+                                <span class="image-preview__default-text">Image Preview</span>
+                            </div>
+                            <input class="input" type="file" name="inpFile" id="inpFile" width="150">
+                            <!--- <img src="image.jpg" class="rounded-circle" width="150">-->
+                            <div class="mt-3">
+                                <h3>Itay Sigron</h3>
+                                <a href="MyBusiness.html">My Business</a>
+                                <a href="">Support</a>
+                                <a href="">Setting</a>
+                                <a href="">Signout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-8 mt-1">
+                        <div class="about">
+                            <div class="card mb-3 content">
+                                <h1 class="m-3 pt-3">About </h1>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h5>Full Name</h5>
+                                        </div>
+                                        <div id="user-full-name" class="col-md-9 text-secondary">
+                                            
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h5>Email</h5>
+                                        </div>
+                                        <div class="col-md-9 text-secondary">
+                                            itay@gmail.com
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h5>Phone</h5>
+                                        </div>
+                                        <div class="col-md-9 text-secondary">
+                                            0505555555
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h5>Address</h5>
+                                        </div>
+                                        <div class="col-md-9 text-secondary">
+                                            Ashkelon
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 content">
+                            <div class="info">
+                                <h1 class="m-3">Info</h1>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h5>Type</h5>
+                                        </div>
+                                        <div class="col-md-9 text-secondary">
+                                            Business-Man
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const inpFile = document.getElementById("inpFile");
+        const previewContainer = document.getElementById("imagePreview");
+        const previewImage = previewContainer.querySelector(".image-preview__image");
+        const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+
+        inpFile.addEventListener("change", function () {
+            const file = this.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                previewDefaultText.style.display = "none";
+                previewImage.style.display = "block";
+
+                reader.addEventListener("load", function () {
+                    console.log(this);
+                    previewImage.setAttribute("src", this.result);
+                    fetch("/users/uploadImage", {
+                        method: "post",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Access-Control-Allow-Origin": "http://localhost:3020/users/",
+                            "Access-Control-Allow-Credentials": true,
+                            "x-api-key": localStorage.getItem("token")
+                        },
+                        body: {
+                            image: this.result
+                        }
+                    }).then(res => {
+                        res.json().then(response => {
+                            if (Math.floor(res.status / 100) !== 2) {
+                                alert("Error: " + response[0].message)
+                            } else {
+                                localStorage.setItem("user", JSON.stringify(response.user));
+                            }
+                        }
+                        )
+                    }).catch(err => {
+                        console.log('err: ', err);
+                    })
+                });
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+        let user = JSON.parse(localStorage.getItem("user"));
+        document.getElementById("user-full-name").innerText = user.firstName + " " + user.lastName;
+        inpFile.src = user.image;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="main">
+        <nav>
+            <ul>
+                <li>
+                    <div class="hello">Hello: user</div>
+                </li>
+                <li><a href="homesign.html">Home</a></li>
+                <li><a href="../profile/Modelprofile.html">Profile</a></li>
+                <li><a href="../About me/About me.html">About Us</a></li>
+                <li><a href="../contact/contact.html">contacts</a></li>
+                <li><a class="out" href="">Sign Out</a></li>
+            </ul>
+        </nav>
+    </div>
+    <title>Document</title>
+    <link href="css/MyBusiness.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="tit">
+            <h1>Dimitrios</h1>
+        </div>
+        <div class="img">
+            <div class="image-preview" id="imagePreview">
+                <img src="" alt="Image Preview" class="image-preview__image">
+                <span class="image-preview__default-text">Image Preview</span>
+            </div><br>
+            <input class="input" type="file" name="inpFile" id="inpFile" width="150">
+        </div>
+        <hr>
+    </div>
+    <div class="table">
+        <h1 class="gg">Business Details</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Business Address:</th>
+                    <td>Herzl St 17, Ashkelon</td>
+                </tr>
+                <tr>
+                    <th>Business email:</th>
+                    <td>dimitrios@gmail.com</td>
+                </tr>
+                <tr>
+                    <th>Business Description:</th>
+                    <td>Bridal Salon And Fashion Design</td>
+                </tr>
+                <tr>
+                    <th>Authorized Dealer:</th>
+                    <td><a href="../pic/morsh.jpg" target="-blank">Click Link</a></td>
+                </tr>
+                <tr>
+                    <th>Account Management Certificate:</th>
+                    <td><a href="../pic/Account Management Certificate.jpg" target="-blank">Click Link</a></td>
+                </tr>
+                <th>Profit and Loss:</th>
+                <td><a href="../pic/Profit and Loss.png" target="-blank">Click Link</a></td>
+                </tr>
+                </tr>
+                <th>Registrar of Companies:</th>
+                <td><a href="../pic/Registrar of Companies1.jpg" target="-blank">Click Link</a></td>
+                </tr>
+                <th>Book managment:</th>
+                <td><a href="../pic/Book managment1.jpg" target="-blank">Click Link</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <tr>
+                <th>Stock price:</th>
+                <td><Strong>33,000$</Strong> </td>
+            </tr>
+        </table>
+        <div class="aside">
+            <h2>coantact</h2>
+            <hr>
+
+            <table class="table1">
+                
+                    
+                    
+               
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td>Sarit Dimitrio</td>
+                        
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td> 050-000-0000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        const inpFile = document.getElementById("inpFile");
+        const previewContainer = document.getElementById("imagePreview");
+        const previewImage = previewContainer.querySelector(".image-preview__image");
+        const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+
+        inpFile.addEventListener("change", function () {
+            const file = this.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                previewDefaultText.style.display = "none";
+                previewImage.style.display = "block";
+
+                reader.addEventListener("load", function () {
+                    console.log(this);
+                    previewImage.setAttribute("src", this.result);
+                });
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+
+</html>
