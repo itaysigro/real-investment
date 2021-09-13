@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
     profitAndLoss: String,
     registrarOfCompanies: String,
     bookManagment: String,
-    image: string,
+    inpFile: String,
 
     role: {
         type: String, default: "regular"
