@@ -19,8 +19,8 @@ function register() {
     let registrarOfCompanies = document.getElementById("RegistrarOfCompanies").value;
     let bookManagment = document.getElementById("BookManagment").value;
 let y = password;
-    if (y.length < 4) {
-        alert("Your password needs a minimum of four characters")
+    if (y.length < 8) {
+        alert("Your password needs a minimum of 8 characters")
         return false;
     }
     if (y.search(/[a-z]/) < 0) {
@@ -37,6 +37,7 @@ let y = password;
     }
 
     if(email !== repeatEmail){
+        alert("email not good");
         return;
     }
 
@@ -84,7 +85,7 @@ let y = password;
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "http://localhost:3020/users/",
+            "Access-Control-Allow-Origin": "/users/",
             "Access-Control-Allow-Credentials": true,
         },
         body: JSON.stringify(userObject)//convert an object to JSON respresentive string
