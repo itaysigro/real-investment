@@ -76,10 +76,10 @@
                                     </div>
                                     <hr>
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div  class="col-md-3">
                                             <h5>Email</h5>
                                         </div>
-                                        <div class="col-md-9 text-secondary">
+                                        <div id user-email class="col-md-9 text-secondary">
                                             itay@gmail.com
                                         </div>
                                     </div>
@@ -175,6 +175,7 @@
 
         let user = JSON.parse(localStorage.getItem("user"));
         document.getElementById("user-full-name").innerText = user.firstName + " " + user.lastName;
+        document.getElementById("user-email").innerText = user.email;
         inpFile.src = user.image;
     </script>
 
