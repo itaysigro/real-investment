@@ -1,5 +1,4 @@
-//יבוא מודול של בדיקת טוקן עם גייסון 
-//npm i jsonwebtoken= ככה מתיקנים את המודל (רושמים בטרמינל בתיקייה של התוכנית)
+
 const jwt = require("jsonwebtoken");
 
 exports.atuhToken = (req, res, next) => {

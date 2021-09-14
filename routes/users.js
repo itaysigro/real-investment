@@ -45,26 +45,29 @@ router.post("/", async (req, res) => {
         res.status(500).json({ message: "We couldn't perform this action at this time, please try again later" });
     }
 })
-
+debugger;
 router.post("/login", async (req, res) => {
     let validBody = validLogin(req.body);
     if (validBody.error) {
         return res.status(400).json(validBody.error.details);
     }
+    console.log(validBody);
 
     let user = await UserModel.findOne({ email: req.body.email });
     if (!user) {
         return res.status(401).json({ message: "We couldn't find a user with this details." });
     }
+    console.log(user);
 
     let passValid = req.body.pass === user.pass;
     if (!passValid) {
         return res.status(401).json({ message: "We couldn't find a user with this details." });
     }
+    console.log(passValid);
 
     let newToken = genToken(user._id);
     res.json({ token: newToken });
-    
+    console.log(newToken);
 })
 
 module.exports = router;
