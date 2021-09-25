@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
         res.status(500).json({ message: "We couldn't perform this action at this time, please try again later" });
     }
 })
-debugger;
+
 router.post("/login", async (req, res) => {
     let validBody = validLogin(req.body);
     if (validBody.error) {
@@ -58,6 +58,10 @@ router.post("/login", async (req, res) => {
         return res.status(401).json({ message: "We couldn't find a user with this details." });
     }
     console.log(user);
+
+    if(user.type !== req.body.type){
+        return res.status(401).json({message: "You are : " + user.type})
+    }
 
     let passValid = req.body.pass === user.pass;
     if (!passValid) {

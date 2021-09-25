@@ -78,7 +78,8 @@ let y = password;
         activeAccountPage,
         profitAndLoss,
         registrarOfCompanies,
-        bookManagment
+        bookManagment,
+        type: "business"
     }
 
     fetch("/users/", {
@@ -94,7 +95,7 @@ let y = password;
             if (Math.floor(res.status / 100) !== 2) {
                 alert("Error: " + response[0].message)
             } else {
-                console.log('success: ', response)
+               window.location.href = "/profile/homesign.html";
             }
         }
         )

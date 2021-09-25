@@ -19,6 +19,7 @@
 
     <title>Sign In</title>
     <link href="css/SignInvestment.css" rel="stylesheet" />
+    <script src="js/sign.js"></script>
     <div class="h11">
         <h1>Real Investment's </h1>
     </div>
@@ -28,28 +29,29 @@
     <hr>
 </head>
 
+
 <body>
+    
     <center>
-        <form action="SignBusinessman.html" method="POST">
+        <div>
             <br><br><br>
             <div class="box">
-                <label class="label1" for="email">Email:</label>
-                <input type="email" id="email" placeholder="email"><br><br>
+            <label class="label1" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email"><br><br>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="password"><br><br>
-            </div>
-            <div class="box1">
-                <button class="login"> Login </button><br>
-                <button class="forget"> forget password</button>
-            </div>
-        </form>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password"><br><br>
+        </div>
+        <div class="box1">
+           
+            <button class="login" type="submit" onclick="login()"> Login </button><br>
+        
+            <button class="forget"> forget password</button>
+        </div>
+        </div>
     </center>
 
-    <script>
 
-
-    </script>
 </body>
 
 </html>

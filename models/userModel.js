@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
     registrarOfCompanies: String,
     bookManagment: String,
     inpFile: String,
-
+    type: String,
     role: {
         type: String, default: "regular"
     },
@@ -66,7 +66,8 @@ exports.validUser = (_bodyData) => {
         activeAccountPage: Joi.string().min(2).max(99).required(),
         profitAndLoss: Joi.string().min(2).max(99).required(),
         registrarOfCompanies: Joi.string().min(2).max(99).required(),
-        bookManagment: Joi.string().min(2).max(99).required()
+        bookManagment: Joi.string().min(2).max(99).required(),
+        type: Joi.string().min(2).max(99).required()
     })
 
 
@@ -78,6 +79,7 @@ exports.validLogin = (_bodyData) => {
     let joiSchema = Joi.object({
         email: Joi.string().min(2).max(99).required().email(),
         password: Joi.string().min(2).max(99).required(),
+        type: Joi.string().min(2).max(99).required()
     })
 
     return joiSchema.validate(_bodyData);

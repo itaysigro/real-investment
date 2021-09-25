@@ -1,10 +1,11 @@
-function login() {
+function login(type) {
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
     let logi = {
         email,
-        password
+        password,
+        type: type === 1 ? "business" : "investor"
     }
 
     let h = fetch("/users/login/", {
