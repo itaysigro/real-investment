@@ -1,5 +1,4 @@
 function login() {
-
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
@@ -7,12 +6,12 @@ function login() {
         email,
         password
     }
-    console.log(logi);
+
     let h = fetch("/users/login/", {
         method: "post",
         headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "/users/login",
+            "Access-Control-Allow-Origin": "/users/login/",
             "Access-Control-Allow-Credentials": true,
         },
         body: JSON.stringify(logi)//convert an object to JSON respresentive string
@@ -24,14 +23,15 @@ function login() {
                 localStorage.setItem("token", response.token);
                 getUserInformation();
             }
+            
         }
         )
     }).catch(err => {
         console.log('err: ', err);
     })
-    console.log(h);
+   console.log(h);
 }
-//console.log(login);
+console.log(login);
 
 function getUserInformation() {
     let g = fetch("/users/userInfo/", {
