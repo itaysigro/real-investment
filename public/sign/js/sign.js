@@ -32,7 +32,7 @@ function login(type) {
     })
    console.log(h);
 }
-console.log(login);
+
 
 function getUserInformation() {
     let g = fetch("/users/userInfo/", {
