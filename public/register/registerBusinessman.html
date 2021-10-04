@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
     <div class="main">
         <nav>
             <ul>
-                <li><a href="../sign/StartSign.html">Sign In</a></li>
+                <li><a href="../index.html">Sign In</a></li>
                 <li><a href="registerstart.html">Register</a></li>
                 <li><a href="../About me/About me.html">About Us</a></li>
                 <li><a href="../contact/contact.html">contact</a></li>
@@ -73,7 +76,7 @@
                 <label for="psw-repeat"><strong>Repeat Password:</strong></label>
                 <input type="password" placeholder="PswRepeat" name="PswRepeat" id="PswRepeat" required>
                 <br><br>
-            
+
                 <div class="box9">
                     <label for="Business Name"><strong>Business Name:</strong></label>
                     <input type="text" id="BusinessName" placeholder="BusinessName" name="BusinessName"><br><br>
@@ -99,54 +102,54 @@
                 <div class="box13">
                     <!--עוסק מורשה-->
                     <label for="Authorized dealer"><strong>Authorized dealer:</strong></label>
-                    <input  accept="image/*" class="a" type="file" id="AuthorizedDealer" placeholder="AuthorizedDealer"
+                    <input accept="image/*" class="a" type="file" id="AuthorizedDealer" placeholder="AuthorizedDealer"
                         name="AuthorizedDealer"><br><br>
                 </div>
 
                 <div class="box14">
                     <!--מצב חשבון פעיל-->
                     <label for="Active account page"><strong>Active account page:</strong></label>
-                    <input  accept="image/*" class="b" type="file" id="ActiveAccountPage" placeholder="ActiveAccountPage"
+                    <input accept="image/*" class="b" type="file" id="ActiveAccountPage" placeholder="ActiveAccountPage"
                         name="ActiveAccountPage"><br><br>
                 </div>
 
                 <div class="box15">
                     <!--דוח מאזן רווח והפסד-->
                     <label for="Profit and Loss"><strong>Profit and Loss:</strong></label>
-                    <input  accept="image/*" class="c" type="file" id="ProfitAndLoss" placeholder="ProfitAndLoss"
+                    <input accept="image/*" class="c" type="file" id="ProfitAndLoss" placeholder="ProfitAndLoss"
                         name="ProfitAndLoss"><br><br>
                 </div>
 
                 <div class="box16">
                     <!--רשם חברות-->
                     <label for="Registrar of Companies"><strong>Registrar of Companies:</strong></label>
-                    <input  accept="image/*" class="d" type="file" id="RegistrarOfCompanies" placeholder="RegistrarOfCompanies"
-                        name="RegistrarOfCompanies"><br><br>
+                    <input accept="image/*" class="d" type="file" id="RegistrarOfCompanies"
+                        placeholder="RegistrarOfCompanies" name="RegistrarOfCompanies"><br><br>
                 </div>
 
                 <div class="box17">
                     <!--ניהול ספרים-->
-                    <label  for="Book managment"><strong>Book managment:</strong></label>
+                    <label for="Book managment"><strong>Book managment:</strong></label>
                     <input accept="image/*" class="e" type="file" id="BookManagment" placeholder="BookManagment"
                         name="BookManagment"><br><br>
                 </div>
 
 
-            <div id="errors">
+                <div id="errors">
+
+                </div>
+                <button class="Next" type="submit" id="submit" onclick="register()">register</button><br>
 
             </div>
-                <button class="Next" type="submit"  id="submit" onclick="register()">register</button><br>
 
+
+
+
+            <br>
+            <label class="sign"><a href="../sign/StartSign.html" class="label6">Already have an account:Sign in</a></p>
+            </label>
+            <br>
         </div>
-
-        
-
-
-        <br>
-        <label class="sign"><a href="../sign/StartSign.html" class="label6">Already have an account:Sign in</a></p>
-        </label>
-        <br>
-    </div>
 
 </body>
 
