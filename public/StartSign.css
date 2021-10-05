@@ -1,224 +1,32 @@
-*
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.navbar-toggler-icon{
+    margin-left: auto;
+}
+.navbar-brand{
+    margin-left: 16px;
+}
+li{
+    padding-left: 14px;
 }
 
-body{
-    margin-top: 20px;
-    background-color: lightgray;
-}
-
-.main{
-    padding: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-nav
-{
-    width: 100%;
-    height: 80px;
-    background-color: whitesmoke;
-}
-
-ul
-{
-    margin-left: 60px;
-
-}
-
-ul li
-{
-    list-style: none;
-    display: inline-block;
-    line-height: 80px;
-    padding: 0 20px;
-}
-
-ul li a
-{
-    display: block;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #1e1e1e;
-}
-
-ul li a:hover
-{
-    color:rgb(4, 101, 245)
-}
-.h11 h1
-{
-    margin-top: 20px;
-    color: #333;
-    text-align: center;
-    font-size: 60px;
-}
-.h22 h2
-{
-    margin-top: 0%;
-    color: #333;
-    text-align: center;
-    font-size: 45px;
-}
-h1
-{
-    margin-top: 20px;
-    color: rgb(4, 101, 245);
-    text-align: center;
-    font-size: 60px;
-}
-
-h2
-{
-    margin-top: 0%;
-    color: rgb(4, 101, 245);
-    text-align: center;
-    font-size: 45px;
-}
-
-h3
-{
-    font-size: 30px;
-    text-align: center;
-    color:#333;
-}
-
-h4
-{
-    font-size: 26px;
-    text-align: center;
-    padding: 0 125px;
-    margin-left: -59px;
-    color:#333;
-    
-}
-
-.btn1
-{
-    height: 180px;
-    width: 250px;
-    padding: 40 80px;
-    margin-left: 460px;
-    background-color: white;
-    font-size: 28px;
-    font-weight: bold;
-    color:#333;
-   
-}
-
-.btn1:hover
-{
-    color:rgb(4, 101, 245);
-    background-color: white;
-}
-
-.btn2{
-    height: 180px;
-    width: 250px;
-    padding: 80 80px;
-    margin-left: 300px;
-    background-color: whitesmoke;
-    font-size: 28px;
-    font-weight: bold;
-    color:#333;
-}
-.btn2:hover
-{
-    color:rgb(4, 101, 245);
-    background-color: white;
-}
-
-
-.Next
-{
-    background-color: rgba(221, 221, 221, 0.705);
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    margin-top: 15;
-    margin-left: 580px;
-    cursor: pointer;
-    border-radius: 16px;
-}
-
-.Next:hover
-{
-    color:rgb(4, 101, 245)
-}
-
-
-
-/* Media Queries: Tabled Portrait */
 @media screen and (max-width: 768px) {
-    .nav
-    {
-        width: 100%;
-        height: 80px;
-        float: left;
-        background-color: whitesmoke;
-    }
-    
-    ul
-    {
-        float: left;
-        padding: 0px;
-        margin-left: 0px;
-    }
-    
-    .ul li{
-        list-style: none;
-        display: block;
-        line-height: 80px;
-        padding: 0 20px;
-    }
-    ul li a{
-        display: block;
-        text-decoration: none;
-        font-size: 14px;
-        padding: -20px;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #1e1e1e;   
-    }
-    .h11 h1{
-        margin-top: 20px;
-        color: #333;
+    h1{
         text-align: center;
-        font-size: 44px;
     }
-    .h22 h2{
-        margin-top: 0%;
-        color: #333;
+    h2{
         text-align: center;
-        font-size: 20px;
     }
     h3{
-        font-size: 18px;
-        color: #333;   
+        text-align: center;
     }
     h4{
-        font-size: 14px;
-        color: #333; 
-        margin-left: 0px;
-    } 
-    .box{
-        margin-top: -60px;
-        margin-left: 96px;
+        text-align: center;
     }
-    .btn1{
-        width: 222px;
-        margin: 0;
+    p{
+        text-align: center;
     }
-    .btn2{
-        width: 222px;
-        margin: 0;
-        margin-top: 8px;
+    .text-sm-center{
+        text-align: center;
     }
-    
+
     }
-    
+
