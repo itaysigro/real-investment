@@ -1,4 +1,4 @@
-*
+/**
 {
     box-sizing: border-box;
     margin: 0;
@@ -92,7 +92,7 @@ h4
     margin-left: -59px;
 }
 
-/*INPUTS*/
+/*INPUTS*//*
 .box{
     margin-left: 40%;
 }
@@ -150,12 +150,12 @@ h4
 .sign
 {
     margin-left: 820px;
-}
+}*/
 
 
 
 /* Media Queries: Tabled Portrait */
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     .nav
     {
         width: 100%;
@@ -218,4 +218,36 @@ h4
   
 
     }
-    
+   */ 
+   
+   .navbar-toggler-icon{
+    margin-left: auto;
+}
+.navbar-brand{
+    margin-left: 16px;
+}
+li{
+    padding-left: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+    h4{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    .text-sm-center{
+        text-align: center;
+    }
+
+    }

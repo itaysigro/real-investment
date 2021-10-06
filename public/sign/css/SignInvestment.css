@@ -11,6 +11,7 @@ fieldset{
   border: black;
     width: 800px;
     height: 380px;
+    text-align: center;
 }
 fieldset legend{
     padding-bottom: 12px;
@@ -19,6 +20,10 @@ fieldset legend{
 .box{
     margin-left: 550px;
 }
+.form-group-row{
+    margin-left:190px;
+}
+
 
 
 @media screen and (max-width: 768px) {
@@ -38,6 +43,7 @@ fieldset legend{
         border: black;
         width: 340px;
         margin-left: 12px;
+        text-align: center;
         
       }
       fieldset legend{
@@ -48,7 +54,13 @@ fieldset legend{
     .box{
         margin-left: 0px;
     }
-    
+    .navbar-brand{
+        margin-left: 4px;
+    }
+    .form-group-row{
+        margin-left:16px;
+    }
 
     }
 
+   

@@ -62,27 +62,32 @@
 
 <body>
     <br>
-    <div class="box">
-        <fieldset class="text-sm-center">
-            <legend>log in</legend>
-            <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-8">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email"><br>
+    <div class="container">
+        <div class="box text-sm-center">
+            <fieldset class="text-sm-center">
+                <legend>log in</legend>
+                <div class="container1">
+                <div class="form-group-row  text-sm-center text-md-center">
+                    <label for="staticEmail" class="col-sm-2 col-form-label text-sm-center text-md-center"></label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email"><br>
+                    </div>
+                </div>
+                <div class="form-group-row text-sm-center">
+                    <label for="inputPassword" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="password" name="password"
+                            placeholder="Password">
+                    </div>
+                </div>
+            
+                <div class="text-sm-center">
+                    <button class="btn btn-primary btn-lg mt-5 " type="submit" onclick="login(1)"> Login </button><br>
+                    <button class="btn btn-secondary btn-lg mt-3"> forget password</button>
                 </div>
             </div>
-            <div class="form-group row">
-                <label for="inputPassword" class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-8">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                </div>
-            </div>
-
-            <div class="text-sm-center">
-                <button class="btn btn-primary btn-lg mt-5 " type="submit" onclick="login(1)"> Login </button><br>
-                <button class="btn btn-secondary btn-lg mt-3"> forget password</button>
-            </div>
-        </fieldset>
+            </fieldset>
+        </div>
     </div>
 </body>
 
