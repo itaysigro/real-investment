@@ -229,7 +229,9 @@ h4
 li{
     padding-left: 14px;
 }
-
+label{
+    margin-left: 12px;
+}
 @media screen and (max-width: 768px) {
     h1{
         text-align: center;
@@ -249,5 +251,6 @@ li{
     .text-sm-center{
         text-align: center;
     }
+ 
 
     }
