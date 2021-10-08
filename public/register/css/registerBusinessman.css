@@ -232,6 +232,7 @@ li{
 label{
     margin-left: 12px;
 }
+
 @media screen and (max-width: 768px) {
     h1{
         text-align: center;
@@ -251,6 +252,8 @@ label{
     .text-sm-center{
         text-align: center;
     }
- 
+    .box{
+        text-align: center;
+    }
 
     }
