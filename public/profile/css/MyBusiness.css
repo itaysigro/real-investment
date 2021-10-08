@@ -84,6 +84,19 @@ ul li a:hover
     margin-right: 40px;
 }
 
+.navbar-toggler-icon{
+    margin-left: auto;
+}
+.navbar-brand{
+    margin-left: 16px;
+}
+li{
+    padding-left: 14px;
+}
+label{
+    margin-left: 12px;
+}
+
 /**image**/
 .img{
     width: 100%;

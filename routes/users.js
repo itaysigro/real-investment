@@ -20,7 +20,7 @@ router.post("/uploadUserImage", async (req, res) => {
     await user.save();
     res.json({ user });
 })
-debugger;
+
 router.post("/", async (req, res) => {
     let validBody = validUser(req.body);
     if (validBody.error) {

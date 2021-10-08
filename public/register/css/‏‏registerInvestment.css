@@ -1,4 +1,4 @@
-*
+/**
 {
     margin: 0;
     padding: 0;
@@ -189,3 +189,41 @@ h2
 {
     color:rgb(4, 101, 245)
 }
+*/
+.navbar-toggler-icon{
+    margin-left: auto;
+}
+.navbar-brand{
+    margin-left: 16px;
+}
+li{
+    padding-left: 14px;
+}
+label{
+    margin-left: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+    h4{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    .text-sm-center{
+        text-align: center;
+    }
+    .box{
+        text-align: center;
+    }
+
+    }

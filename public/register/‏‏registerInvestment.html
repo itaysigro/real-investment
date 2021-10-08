@@ -5,25 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-    <nav>
-        <ul>
-            <li><a href="../sign/StartSign.html">Sign In</a></li>
-            <li><a href="registerstart.html">Register</a></li>
-            <li><a href="../About me/About me.html">About Us</a></li>
-            <li><a href="../contact/contact.html">contact</a></li>
-        </ul>
-    </nav>
-    <title>Business registration page1</title>
     <link href="css/‏‏registerInvestment.css" rel="stylesheet" />
-    <div class="h11">
-        <h1>Real Investment's </h1>
-    </div>
-    <div class="h22">
-        <h2>An Investment that suits everyone</h2>
-    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Hello</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="navbar-nav float-right text-right pr-3">
+                <ul class="navbar-nav text-sm-right">
+                    <li>
+                        <a href="../index.html" class="nav-item nav-link active">Sign In</a>
+                    </li>
+                    <li>
+                        <a href="../register/registerstart.html" class="nav-item nav-link active">Register</a>
+                    </li>
+                    <li>
+                        <a href="../About us/About me.html" class="nav-item nav-link active">About Us</a>
+                    </li>
+                    <li>
+                        <a href="../contact/contact.html" class="nav-item nav-link active">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <title>Business registration page1</title>
+
+    <br>
+    <h1 class="display-4 text-sm-center">Real Investment's </h1>
+    <h2 class="display-4 text-sm-center">An Investment that suits everyone</h2>
+    <br>
     <hr>
 </head>
 
@@ -34,7 +64,7 @@
         <br>
         <h4>Personal Details</h4><br><br>
 
-        <form action="registerBusinessman1.html" method="POST">
+        <!-- <form action="registerBusinessman1.html" method="POST">
 
             <label class="label1" for="First Name"><strong>First Name:</strong></label>
             <input class="input1" type="text" placeholder="First Name" name="First Name" id="First Name"
@@ -59,19 +89,23 @@
             <input class="input7" type="date" name="Date of birth" id="Date of birth" required><br><br>
 
 
-            <label class="label7" for="Active account page"></label><strong>Active account page:</strong></label>
-            <!--מצב חשבון פעיל-->
-            <input class="input7" type="file" id="Active account page" placeholder="Active account page"
+            <label class="label7" for="Active account page"></label><strong>Active account page:</strong></label>-->
+        <!--מצב חשבון פעיל-->
+        <!-- <input class="input7" type="file" id="Active account page" placeholder="Active account page"
                 name="Active account page" required><br><br>
 
             <label class="label7" for=" Back year operations in account"></label><strong> Back year operations in
-                account:</strong></label><!-- פעולות אחרונות בחשבון שנה-->
-            <input class="input7" type="file" id=" Back year operations in account"
+                account:</strong></label>-->
+        <!-- פעולות אחרונות בחשבון שנה-->
+        <!--<input class="input7" type="file" id=" Back year operations in account"
                 placeholder=" Back year operations in account" name=" Back year operations in account" required><br><br>
+        -->
 
-            <label class="label7" for="Form if there are any loans"></label><strong>Form if there are any
-                loans:</strong></label><!-- טופס שבודק אם יש הלוואות -->
-            <input class="input7" type="file" id="Form if there are any loans" placeholder="Form if there are any loans"
+        <!-- טופס שבודק אם יש הלוואות -->
+        <!--   <label class="label7" for="Form if there are any loans"></label><strong>Form if there are any
+                loans:</strong></label>
+      
+         <input class="input7" type="file" id="Form if there are any loans" placeholder="Form if there are any loans"
                 name="Form if there are any loans" required><br><br>
 
 
@@ -95,7 +129,188 @@
         <label class="sign"><a href="../sign/StartSign.html" class="label6">Already have an account:Sign in</a></p>
         </label>
         <br>
-    </center>
+    </center>-->
+        <fieldset>
+            <div class="box align-self-center">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control " name="FirstName" id="FirstName"
+                            placeholder="First Name" required>
+                    </div><br>
+
+                    <div class="form-group col-md-4">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" name="LastName" id="LastName" placeholder="Last Name"
+                            required>
+                    </div><br>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputCity">City</label>
+                        <select id="city" name="city" class="form-control" required>
+                            <option selected>Choose...</option>
+                            <option>Afula</option>
+                            <option>Akko</option>
+                            <option>Arad</option>
+                            <option>Ariel</option>
+                            <option>Ashdod</option>
+                            <option>Ashkelon</option>
+                            <option>Baqa al-Gharbiyye</option>
+                            <option>Bat Yam</option>
+                            <option>Beer Sheva</option>
+                            <option>Beit Shean</option>
+                            <option>Beit Shemesh</option>
+                            <option>Betar Illit</option>
+                            <option>Bnei Berak</option>
+                            <option>Dimona</option>
+                            <option>Eilat</option>
+                            <option>Elad</option>
+                            <option>Givatayim</option>
+                            <option>Hadera</option>
+                            <option>Haifa</option>
+                            <option>Harish</option>
+                            <option>Herzliya</option>
+                            <option>Hod HaSharon</option>
+                            <option>Holon</option>
+                            <option>Jerusalem</option>
+                            <option>Karmiel</option>
+                            <option>Kfar Sava</option>
+                            <option>Kiryat Ata</option>
+                            <option>Kiryat Bialik</option>
+                            <option>Kiryat Gat</option>
+                            <option>Kiryat Malachi</option>
+                            <option>Kiryat Motzkin</option>
+                            <option> Kiryat Ono</option>
+                            <option> Kiryat Shemone</option>
+                            <option> Kiryat Yam</option>
+                            <option>Lod</option>
+                            <option> Maale Adumim</option>
+                            <option> Maalot Tarshiha</option>
+                            <option>Migdal HaEmek</option>
+                            <option>Modiin</option>
+                            <option> Nahariya</option>
+                            <option>Nazareth</option>
+                            <option>Nes Ziona</option>
+                            <option> Nesher</option>
+                            <option>Netanya</option>
+                            <option> Netivot</option>
+                            <option>Nof Hagalil</option>
+                            <option>Ofakim</option>
+                            <option>Or Akiva</option>
+                            <option>Or Yehuda</option>
+                            <option>Petah Tikva</option>
+                            <option> Qalansawe</option>
+                            <option>Raanana</option>
+                            <option>Rahat</option>
+                            <option>Ramat Hasharon</option>
+                            <option>Ramat-Gan</option>
+                            <option>Ramla</option>
+                            <option>Rehovot</option>
+                            <option>Rishon Lezion</option>
+                            <option> Rosh Ha'ayin</option>
+                            <option>Sakhnin</option>
+                            <option>Sderot</option>
+                            <option>Shefaram</option>
+                            <option>Taibeh</option>
+                            <option> Tamra</option>
+                            <option> Tel Aviv</option>
+                            <option>Tiberias</option>
+                            <option> Tira</option>
+                            <option>Tirat Carmel</option>
+                            <option>Tsfat (Safed)</option>
+                            <option>Umm al-Fahm</option>
+                            <option>Yavne</option>
+                            <option>Yehud-Monosson</option>
+                            <option>Yokneam</option>
+                        </select>
+                    </div><br>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" name="Address" id="Address" placeholder="Address"
+                            required>
+                    </div><br>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" name="Email" id="Email" placeholder="Email" required>
+                    </div><br>
+
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputEmail4">Repeat Email</label>
+                            <input type="email" class="form-control" name="Remail" id="Remail"
+                                placeholder="Repeat Email" required>
+                        </div><br>
+
+                        <div class="form-group col-md-4">
+                            <label for="inputDateOfBirth">Date Of Birth</label>
+                            <input type="date" class="form-control" name="DateOfBirth" id="DateOfBirth" required>
+                        </div><br>
+
+                        <div class="form-group col-md-4">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" name="Psw" id="Psw" placeholder="Password"
+                                required>
+                        </div>
+                    </div><br>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputPassword4">Repeat Password</label>
+                        <input type="password" class="form-control" name="PswRepeat" id="PswRepeat"
+                            placeholder="Repeat Password" required>
+                    </div><br>
+
+                    <!--מצב חשבון פעיל-->
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input accept="image/*" type="file" class="custom-file-input" name="ActiveAccountPage"
+                                id="ActiveAccountPage" placeholder="ActiveAccountPage" required>
+                            <label class="custom-file-label" for="inputGroupFile04">Choose file &nbsp</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Active account page
+                            </button>
+                        </div>
+                    </div><br>
+
+                    <!-- פעולות אחרונות בחשבון שנה-->
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input accept="image/*" type="file" class="custom-file-input"
+                                name="BackYearOperationsInAccount" id="BackYearOperationsInAccount"
+                                placeholder="BackYearOperationsInAccount" required>
+                            <label class="custom-file-label" for="inputGroupFile04">Choose file &nbsp</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Back year operations in
+                                account</button>
+                        </div>
+                    </div><br>
+
+                    <!-- טופס שבודק אם יש הלוואות -->
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input accept="image/*" type="file" class="custom-file-input" name="Checkloans"
+                                id="Checkloans" placeholder="CheckLoans" required>
+                            <label class="custom-file-label" for="inputGroupFile04">Choose file &nbsp</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Check loans</button>
+                        </div>
+                    </div><br>
+
+                    <div id="errors">
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submit" onclick="register()">Register</button><br>
+
+                </div>
+
+        </fieldset>
 </body>
 
 </html>

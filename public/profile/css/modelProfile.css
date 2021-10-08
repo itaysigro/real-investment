@@ -104,7 +104,19 @@ h3{
     margin-left: 85px;
     margin-top: 5px;
 }
-
+/*זה הטוב*/
+.navbar-toggler-icon{
+    margin-left: auto;
+}
+.navbar-brand{
+    margin-left: 16px;
+}
+li{
+    padding-left: 14px;
+}
+label{
+    margin-left: 12px;
+}
 
 
 
