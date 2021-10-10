@@ -37,8 +37,8 @@ router.post("/", async (req, res) => {
         user.password = req.body.password;
 
         await user.save();
-        user.password = "********";
-        res.json(user);
+        let newToken = genToken(user._id);
+        res.json({ token: newToken });
     }
     catch (err) {
         console.log(err);
@@ -71,7 +71,6 @@ router.post("/login", async (req, res) => {
 
     let newToken = genToken(user._id);
     res.json({ token: newToken });
-    console.log(newToken);
 })
 
 module.exports = router;

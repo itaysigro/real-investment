@@ -11,7 +11,6 @@ function register() {
     let repeatPassword = document.getElementById("PswRepeat").value;
     let businessName = document.getElementById("BusinessName").value;
     let businessAddress = document.getElementById("BusinessAddress").value;
-    let businessEmail = document.getElementById("BusinessEmail").value;
     let businessDescription = document.getElementById("BusinessDescription").value;
     let authorizedDealer = document.getElementById("AuthorizedDealer").value;
     let activeAccountPage = document.getElementById("ActiveAccountPage").value;
@@ -72,7 +71,6 @@ let y = password;
         repeatPassword,
         businessName,
         businessAddress,
-        businessEmail,
         businessDescription,
         authorizedDealer,
         activeAccountPage,
@@ -95,7 +93,8 @@ let y = password;
             if (Math.floor(res.status / 100) !== 2) {
                 alert("Error: " + response[0].message)
             } else {
-               window.location.href = "/profile/homesign.html";
+                localStorage.setItem("token", response.token);
+                getUserInformation();
             }
         }
         )
@@ -104,3 +103,28 @@ let y = password;
     })
 }
 
+function getUserInformation() {
+    let g = fetch("/users/userInfo/", {
+        method: "get",
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "/users/userInfo",
+            "Access-Control-Allow-Credentials": true,
+            "x-api-key": localStorage.getItem("token")
+        },
+    }).then(res => {
+        res.json()
+            .then(response => {
+                if (Math.floor(res.status / 100) !== 2) {
+                    alert("Error: " + response[0].message)
+                } else {
+                    localStorage.setItem("user", JSON.stringify(response.user));
+                    window.location.href = "/profile/homesign.html";
+                }
+            }
+            )
+    }).catch(err => {
+        console.log('err: ', err);
+    })
+    console.log(g);
+}

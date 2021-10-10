@@ -60,7 +60,6 @@ exports.validUser = (_bodyData) => {
         
         businessName: Joi.string().min(2).max(99).required(),
         businessAddress: Joi.string().min(2).max(99).required(),
-        businessEmail: Joi.string().min(2).max(99).required(),
         businessDescription:  Joi.string().min(2).max(99).required(),
         authorizedDealer: Joi.string().min(2).max(99).required(),
         activeAccountPage: Joi.string().min(2).max(99).required(),

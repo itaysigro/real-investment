@@ -179,18 +179,24 @@
         </div>
     -->
     <fieldset>
-    <div class="box align-self-center">
-        <div class="form-row">
+    <div class="box align-self-center row d-flex justify-content-center">
+        <div class="form-row justify-content-center row col-8 mx-0">
+            <div class="col-md-2"></div><br>
+
             <div class="form-group col-md-4">
                 <label for="FirstName">First Name</label>
                 <input type="text" class="form-control " name="FirstName" id="FirstName" placeholder="First Name"
                     required>
-            </div><br>
+            </div>
 
             <div class="form-group col-md-4">
                 <label for="LastName">Last Name</label>
                 <input type="text" class="form-control" name="LastName" id="LastName" placeholder="Last Name" required>
-            </div><br>
+            </div>
+
+            <div class="col-md-2"></div><br>
+
+            <div class="col-md-2"></div><br>
 
             <div class="form-group col-md-4">
                 <label for="inputCity">City</label>
@@ -270,49 +276,60 @@
                     <option>Yehud-Monosson</option>
                     <option>Yokneam</option>
                 </select>
-            </div><br>
+            </div>
 
             <div class="form-group col-md-4">
                 <label for="inputAddress">Address</label>
                 <input type="text" class="form-control" name="Address" id="Address" placeholder="Address" required>
-            </div><br>
+            </div>
+
+            <div class="col-md-2"></div><br>
+            <div class="col-md-2"></div><br>
 
             <div class="form-group col-md-4">
                 <label for="inputEmail4">Email</label>
                 <input type="email" class="form-control" name="Email" id="Email" placeholder="Email" required>
-            </div><br>
+            </div>
 
 
-
-            <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="inputEmail4">Repeat Email</label>
                     <input type="email" class="form-control" name="Remail" id="Remail" placeholder="Repeat Email"
                         required>
-                </div><br>
+                </div>
 
-                <div class="form-group col-md-4">
-                    <label for="inputDateOfBirth">Date Of Birth</label>
-                    <input type="date" class="form-control" name="DateOfBirth" id="DateOfBirth" required>
-                </div><br>
+                <div class="col-md-2"></div><br>
+                <div class="col-md-2"></div><br>
 
                 <div class="form-group col-md-4">
                     <label for="inputPassword4">Password</label>
                     <input type="password" class="form-control" name="Psw" id="Psw" placeholder="Password" required>
                 </div>
-            </div><br>
-
+                
             <div class="form-group col-md-4">
                 <label for="inputPassword4">Repeat Password</label>
                 <input type="password" class="form-control" name="PswRepeat" id="PswRepeat"
                     placeholder="Repeat Password" required>
             </div><br>
+            
+            
+                <div class="col-md-2"></div><br>
+                <div class="col-md-2"></div><br>
 
-            <div class="form-group col-md-4">
-                <label for="inputBusinessName">Business Name</label>
-                <input type="text" class="form-control" name="BusinessName" id="BusinessName"
-                    placeholder="Business Name" required>
-            </div><br>
+         
+                <div class="form-group col-md-4">
+                    <label for="inputDateOfBirth">Date Of Birth</label>
+                    <input type="date" class="form-control" name="DateOfBirth" id="DateOfBirth" required>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="inputBusinessName">Business Name</label>
+                    <input type="text" class="form-control" name="BusinessName" id="BusinessName"
+                        placeholder="Business Name" required>
+                </div><br>
+
+                <div class="col-md-2"></div><br>
+                <div class="col-md-2"></div><br>
 
             <div class="form-group col-md-4">
                 <label for="inputBusinessAddress">Business Address</label>
@@ -322,12 +339,14 @@
 
             <div class="form-group col-md-4">
                 <label for="inputBusinessDescription">BusinessDescription</label>
-                <input type="text" class="form-control" name="BusinessDescription" id="Business Description"
+                <input type="text" class="form-control" name="BusinessDescription" id="BusinessDescription"
                     placeholder="BusinessDescription" required>
             </div><br>
 
+            <div class="col-md-2"></div>
+
             <!--עוסק מורשה-->
-            <div class="input-group">
+            <div class="col-md-12 d-flex justify-content-center mt-4">
                 <div class="custom-file">
                     <input accept="image/*" type="file" class="custom-file-input" name="Authorized Dealer"
                         id="AuthorizedDealer" placeholder="AuthorizedDealer" required>
@@ -336,10 +355,10 @@
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button">Authorized Dealer</button>
                 </div>
-            </div><br>
+            </div>
 
             <!--מצב חשבון פעיל-->
-            <div class="input-group">
+            <div class="col-md-12 d-flex justify-content-center mt-4">
                 <div class="custom-file">
                     <input accept="image/*" type="file" class="custom-file-input" name="ActiveAccountPage"
                         id="ActiveAccountPage" placeholder="Active Account Page" required>
@@ -348,10 +367,10 @@
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button">Active Account Page</button>
                 </div>
-            </div><br>
+            </div>
 
             <!--דוח מאזן רווח והפסד-->
-            <div class="input-group">
+            <div class="col-md-12 d-flex justify-content-center mt-4">
                 <div class="custom-file">
                     <input accept="image/*" type="file" class="custom-file-input" name="ProfitAndLoss"
                         id="ProfitAndLoss" placeholder="ProfitAndLoss" required>
@@ -360,10 +379,10 @@
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button">Profit And Loss</button>
                 </div>
-            </div><br>
+            </div>
 
             <!--רשם חברות-->
-            <div class="input-group">
+            <div class="col-md-12 d-flex justify-content-center mt-4">
                 <div class="custom-file">
                     <input accept="image/*" type="file" class="custom-file-input" name="RegistrarOfCompanies"
                         id="RegistrarOfCompanies" placeholder="Registrar Of Companies" required>
@@ -372,10 +391,10 @@
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button">Registrar Of Companies</button>
                 </div>
-            </div><br>
+            </div>
 
             <!--ניהול ספרים-->
-            <div class="input-group">
+            <div class="col-md-12 d-flex justify-content-center mt-4">
                 <div class="custom-file">
                     <input accept="image/*" type="file" class="custom-file-input" name="BookManagment"
                         id="BookManagment" placeholder="Book Managment" required>
@@ -385,23 +404,26 @@
                     <button class="btn btn-outline-secondary" type="button">Book Managment</button>
                 </div>
             </div>
+            
         </div><br>
 
+       <div class="d-flex justify-content-center align-items-center flex-column">
         <div id="errors">
 
         </div>
         
-        <button type="submit" class="btn btn-primary" id="submit" onclick="register()">Register</button><br>
-    
+        <button type="submit" class="btn btn-primary col-1" id="submit" onclick="register()">Register</button><br>
+        <label class="text-sm-center"><a href="../sign/StartSign.html" class="text-sm-center">Already have an account:Sign
+            in</a></p>
+    </label>
+       </div>
     </div>
 
 </fieldset>
 
 
     <br>
-    <label class="text-sm-center"><a href="../sign/StartSign.html" class="text-sm-center">Already have an account:Sign
-            in</a></p>
-    </label>
+
     <br><br>
     </div>
     </div>
