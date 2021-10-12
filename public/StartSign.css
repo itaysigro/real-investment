@@ -7,6 +7,10 @@
 li{
     padding-left: 14px;
 }
+.navbar{
+    height: 75px;
+    font-size: 20px;
+}
 
 @media screen and (max-width: 768px) {
     h1{
@@ -28,5 +32,9 @@ li{
         text-align: center;
     }
 
+    .navbar{
+        height: 75px;
+        font-size: 20px;
+    }
     }
 
