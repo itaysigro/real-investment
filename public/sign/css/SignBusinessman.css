@@ -16,10 +16,6 @@ fieldset legend{
     padding-bottom: 12px;
     padding-top: 12px;
 }
-.box{
-    margin-left: 550px;
-}
-
 
 @media screen and (max-width: 768px) {
     h1{

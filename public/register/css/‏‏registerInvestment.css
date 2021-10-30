@@ -227,3 +227,11 @@ label{
     }
 
     }
+
+    .inputs{
+        margin-top: 2rem;
+    }
+
+    .inputs .input-group {
+        max-width: 700px;
+    }
