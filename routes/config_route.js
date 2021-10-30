@@ -2,6 +2,6 @@
  const userR = require("./users");
 
 exports.routesInit = (app) => {
-    app.use("/users",userR);
+    app.use("/users", userR);
     app.use("/",indexR);
 }

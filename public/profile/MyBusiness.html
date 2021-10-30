@@ -20,6 +20,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
+        <script src="js/mybusiness.js"></script>
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <li>
@@ -80,18 +81,18 @@
         <table>
             <tbody>
                 <tr>
-                    <th>Business Address:</th>
-                    <td>Herzl St 17, Ashkelon</td>
+                    <th>Business Name:</th>
+                    <td id="businessName"><button onclick="save()">Save</button></td>
                 </tr>
                 <tr>
-                    <th>Business email:</th>
-                    <td>dimitrios@gmail.com</td>
+                    <th>Business Address:</th>
+                    <td id="businessAddress"><button onclick="save()">Save</button></td>
                 </tr>
                 <tr>
                     <th>Business Description:</th>
-                    <td>Bridal Salon And Fashion Design</td>
+                    <td id="businessDescription"><button onclick="save()">Save</button></td>
                 </tr>
-                <tr>
+                <tr id="businessAddress">
                     <th>Authorized Dealer:</th>
                     <td><a href="../pic/morsh.jpg" target="-blank">Click Link</a></td>
                 </tr>
@@ -123,23 +124,15 @@
             <hr>
 
             <table class="table1">
-
-
-
-
                 <tbody>
                     <tr>
-                        <th>Name</th>
-                        <td>Sarit Dimitrio</td>
-
-                    </tr>
-                    <tr>
-                        <th>Phone</th>
-                        <td> 050-000-0000</td>
+                        <th>First Name</th>
+                        <td><input id="nameInput" /></td>
                     </tr>
                 </tbody>
             </table>
 
+            <button onclick="save()">save</button>
         </div>
     </div>
 
