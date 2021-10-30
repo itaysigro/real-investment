@@ -1,5 +1,7 @@
 
 function register() {
+    removeErrors();
+
     let firstName = document.getElementById("FirstName").value;
     let lastName = document.getElementById("LastName").value;
     let city = document.getElementById("city").value;
@@ -17,30 +19,106 @@ function register() {
     let profitAndLoss = document.getElementById("ProfitAndLoss").value;
     let registrarOfCompanies = document.getElementById("RegistrarOfCompanies").value;
     let bookManagment = document.getElementById("BookManagment").value;
-let y = password;
-    if (y.length < 8) {
-        alert("Your password needs a minimum of 8 characters")
+    let y = password;
+
+    if (firstName.length < 2) {
+        createErrorMessage(document.getElementById("FirstName"), "Must be at least 2 characters.");
+        return false;
+    }
+
+    if (lastName.length < 2) {
+        createErrorMessage(document.getElementById("LastName"), "Must be at least 2 characters.");
+        return false;
+    }
+
+    if (city.length < 2) {
+        createErrorMessage(document.getElementById("city"), "City is required.");
+        return false;
+    }
+
+    if (address.length < 2) {
+        createErrorMessage(document.getElementById("Address"), "Address is required.");
+        return false;
+    }
+
+    if (email.length < 2) {
+        createErrorMessage(document.getElementById("Email"), "Email is required.");
+        return false;
+    }
+
+    if (y.length < 3) {
+        createErrorMessage(document.getElementById("Psw"), "Password must contain uppercase, lowercase and numbers.");
         return false;
     }
     if (y.search(/[a-z]/) < 0) {
-        alert("Your password needs a lower case letter")
+        createErrorMessage(document.getElementById("Psw"), "Password must contain uppercase, lowercase and numbers.")
         return false;
     }
     if (y.search(/[A-Z]/) < 0) {
-        alert("Your password needs an uppser case letter")
+        createErrorMessage(document.getElementById("Psw"), "Password must contain uppercase, lowercase and numbers.")
         return false;
     }
     if (y.search(/[0-9]/) < 0) {
-        alert("Your password needs a number")
+        createErrorMessage(document.getElementById("Psw"), "Password must contain uppercase, lowercase and numbers.")
         return false;
     }
 
-    if(email !== repeatEmail){
-        alert("email not good");
-        return;
+    if (password !== repeatPassword) {
+        createErrorMessage(document.getElementById("PswRepeat"), "Password and repeat password must match.")
+        return false;
     }
 
-    let date1= new Date(dateOfBirth)
+    if (email !== repeatEmail) {
+        createErrorMessage(document.getElementById("Remail"), "Email and repeat email must match.")
+        return false;
+    }
+
+    if (dateOfBirth.length < 2) {
+        createErrorMessage(document.getElementById("DateOfBirth"), "DateOfBirth is required.")
+        return false;
+    }
+
+    if (businessName.length < 2) {
+        createErrorMessage(document.getElementById("BusinessName"), "BusinessName is required.")
+        return false;
+    }
+
+    if (businessAddress.length < 2) {
+        createErrorMessage(document.getElementById("BusinessAddress"), "BusinessAddress is required.")
+        return false;
+    }
+
+    if (businessDescription.length < 2) {
+        createErrorMessage(document.getElementById("BusinessDescription"), "BusinessDescription is required.")
+        return false;
+    }
+
+    if (authorizedDealer.length < 2) {
+        createErrorMessage(document.getElementById("AuthorizedDealer"), "AuthorizedDealer is required.")
+        return false;
+    }
+
+    if (activeAccountPage.length < 2) {
+        createErrorMessage(document.getElementById("ActiveAccountPage"), "ActiveAccountPage is required.")
+        return false;
+    }
+
+    if (profitAndLoss.length < 2) {
+        createErrorMessage(document.getElementById("ProfitAndLoss"), "ProfitAndLoss is required.")
+        return false;
+    }
+
+    if (registrarOfCompanies.length < 2) {
+        createErrorMessage(document.getElementById("RegistrarOfCompanies"), "RegistrarOfCompanies is required.")
+        return false;
+    }
+
+    if (bookManagment.length < 2) {
+        createErrorMessage(document.getElementById("BookManagment"), "BookManagment is required.")
+        return false;
+    }
+
+    let date1 = new Date(dateOfBirth)
     const now = new Date();
 
     function dateDiffInDays(a, b) {
@@ -48,17 +126,17 @@ let y = password;
         // Discard the time and time-zone information.
         const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
         const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
-      
+
         return Math.floor((utc2 - utc1) / _MS_PER_DAY);
-      }
+    }
 
-      let diffInYear = (dateDiffInDays(date1, now)/365);
+    let diffInYear = (dateDiffInDays(date1, now) / 365);
 
-      if(diffInYear < 18){
-          alert("young");
-          return;
-      }
-      
+    if (diffInYear < 18) {
+        createErrorMessage(document.getElementById("DateOfBirth"), "You must be at least 18 years old.");
+        return;
+    }
+
     let userObject = {
         firstName,
         lastName,
@@ -127,4 +205,24 @@ function getUserInformation() {
         console.log('err: ', err);
     })
     console.log(g);
+}
+
+function createErrorMessage(input, message) {
+    input.classList.add("is-invalid");
+    let errorDiv = document.createElement("div");
+    errorDiv.classList.add("invalid-feedback");
+    errorDiv.innerHTML = message;
+    input.parentElement.appendChild(errorDiv);
+}
+
+function removeErrors() {
+    let oldError = document.querySelectorAll(".invalid-feedback");
+    for (let i = 0; i < oldError.length; i++) {
+        oldError[i].remove();
+    }
+
+    let markedInputs = document.querySelectorAll(".is-invalid");
+    for (let i = 0; i < markedInputs.length; i++) {
+        markedInputs[i].classList.remove("is-invalid")
+    }
 }
