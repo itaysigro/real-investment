@@ -34,7 +34,8 @@ const userSchema = new mongoose.Schema({
 })
 
 
-
+//שאני אפנה לkey user 
+//אז אני אומר לו שזה המבנה שאמור להיכנס לתוך יוזר 
 const UserModel = mongoose.model("users", userSchema);
 
 exports.UserModel = UserModel;

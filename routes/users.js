@@ -4,6 +4,7 @@ const { UserModel, validUser, validLogin, genToken } = require("../models/userMo
 const { authToken, atuhToken } = require("../auth/authToken");
 const router = express.Router();
 
+
 router.get("/", (req, res) => {
     res.json({ msg: "users work" })
 });
@@ -21,6 +22,8 @@ router.post("/uploadUserImage", async (req, res) => {
     res.json({ user });
 })
 
+//הגדרה של ראוט 
+//מסוג פוסט שמוביל אותי לכתובת סלש במקרה הזה
 router.post("/", async (req, res) => {
     let validBody = validUser(req.body);
     if (validBody.error) {
